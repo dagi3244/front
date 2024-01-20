@@ -71,61 +71,61 @@ export async function getAnswers(token, questionid) {
     throw new Error(error.response.data.msg || "Answer creation failed");
   }
 }
-//user profile image upload api
-export async function uploadImage(formData, token) {
-  try {
-    const res = await axios.post("/api/images/upload", formData, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return res.data;
-  } catch (error) {
-    throw new Error(error.response.data.msg || "Image upload failed");
-  }
-}
-//get user profile image api
+// //user profile image upload api
+// export async function uploadImage(formData, token) {
+//   try {
+//     const res = await axios.post("/api/images/upload", formData, {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//     return res.data;
+//   } catch (error) {
+//     throw new Error(error.response.data.msg || "Image upload failed");
+//   }
+// }
+// //get user profile image api
 
-export async function getUserProfileImage(token) {
-  try {
-    const res = await axios.get("/api/images/profile", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      responseType: "blob",
-    });
-    return res.data;
-  } catch (error) {
-    throw new Error(error.response.data.msg || "Image upload failed");
-  }
-}
+// export async function getUserProfileImage(token) {
+//   try {
+//     const res = await axios.get("/api/images/profile", {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//       responseType: "blob",
+//     });
+//     return res.data;
+//   } catch (error) {
+//     throw new Error(error.response.data.msg || "Image upload failed");
+//   }
+// }
 
-//get all user images api
-export async function getAllUserImages(token) {
-  try {
-    const res = await axios.get("/api/images", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return res.data;
-  } catch (error) {
-    throw new Error(error.response.data.msg || "Image upload failed");
-  }
-}
-export async function createQuestionLike(token, questionid) {
-  try {
-    const res = await axios.post(
-      `/api/likes/questions/${questionid}/like`,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    return res.data;
-  } catch (error) {
-    throw new Error(error.response.data.msg || "Question like failed");
-  }
-}
+// //get all user images api
+// export async function getAllUserImages(token) {
+//   try {
+//     const res = await axios.get("/api/images", {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//     return res.data;
+//   } catch (error) {
+//     throw new Error(error.response.data.msg || "Image upload failed");
+//   }
+// }
+// export async function createQuestionLike(token, questionid) {
+//   try {
+//     const res = await axios.post(
+//       `/api/likes/questions/${questionid}/like`,
+//       {},
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//     return res.data;
+//   } catch (error) {
+//     throw new Error(error.response.data.msg || "Question like failed");
+//   }
+// }

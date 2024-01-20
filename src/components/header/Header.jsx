@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import "./header.css";
-import Notification from "../notification/Notification";
+
 import UserMenu from "../usermenu/UserMenu";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Avatar from "react-avatar";
@@ -95,9 +95,7 @@ function Header() {
             </li>
             {token ? (
               <>
-                <div className="notifications">
-                  <Notification />
-                </div>
+                
                 <div
                   className="user"
                   onMouseEnter={() => setUserMenu(true)}
@@ -133,10 +131,7 @@ function Header() {
                   </div>
                   {userMenu && (
                     <UserMenu
-                    // refresh={() => {
-                    //   setUserImage(!userImage);
-                    // }}
-                    />
+                         />
                   )}
                 </div>
               </>

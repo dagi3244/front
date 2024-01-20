@@ -50,11 +50,11 @@ function Comment({}) {
         <textarea
           name="answer"
           id=""
-          placeholder="Add Comment"
+          placeholder="Add Answer"
           value={answer.answer}
           onChange={handleChange}
         ></textarea>
-        <button type="submit">Add To Comment</button>
+        <button type="submit">Add Your Answer</button>
       </form>
       {answers.length > 0 &&
         answers?.map((data) => (
