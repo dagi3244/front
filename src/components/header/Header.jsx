@@ -23,7 +23,7 @@ function Header() {
         <div>
           <div className="logo">
             <img
-              src="https://evangadi-forum-backend-otkh.onrender.com/themes/humans//assets/images/misc/evangadi-logo-home.png"
+              src="https://www.evangadi.com/themes/humans//assets/images/misc/evangadi-logo-home.png"
               alt="Logo"
             />
           </div>
@@ -109,7 +109,7 @@ function Header() {
                       <img
                         src={
                           user?.imageBlob
-                            ? `http://localhost:3001/api/all/images/${
+                            ? `https://evangadi-forum-backend-otkh.onrender.com/api/all/images/${
                                 user.imageBlob[user?.userid]
                               }`
                             : ""
