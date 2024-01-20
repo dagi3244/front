@@ -34,11 +34,10 @@ function Forum() {
     fetchData();
   }, [token]);
 
-  
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
- 
+
   const handleComment = (id) => {
     setComment(id);
     comment === id ? setCommentToggle(!commentToggle) : setCommentToggle(true);
@@ -57,7 +56,6 @@ function Forum() {
               onChange={handleSearch}
             />
           </div>
-         
         </div>
 
         <div className="forum-body">
@@ -96,13 +94,7 @@ function Forum() {
                         <p>{data.description}</p>
                       </div>
                       <div className="question-reply">
-                       
                         <button onClick={() => handleComment(data.questionid)}>
-                          {data.comment_count > 0 && (
-                            <span style={{ margin: "0px 5px" }}>
-                              {data.comment_count}{" "}
-                            </span>
-                          )}
                           Answer
                         </button>
                       </div>{" "}
